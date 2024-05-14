@@ -15,6 +15,7 @@ def_email = ['ghos123456789amam@gmail.com', 'rykuvkuhutrnpxrz']
 
 
 def attack():
+      mail = smtplib.SMTP("SMTP.gmail.com",587)
     try:
         target = Write.Input("Enter Taget Email Adders>>>", Colors.blue_to_green)
         email = Write.Input("Do You Want Use A Default Email? If Yes Enter [y] else [n] >>>", Colors.blue_to_red)
@@ -26,17 +27,7 @@ def attack():
             password = Write.Input("Enter Password>>>", Colors.blue_to_green)
         message = Write.Input("\nEnter Message>>>", Colors.blue_to_black)
         counter = int(Write.Input("How Many Message You Want To Send>>>", Colors.black_to_green))
-        provider = Write.Input("Select The Service Provider (Gmail / Outlook / yahoo)>>>", Colors.blue_to_green)
-        subject = Write.Input("Enter Subject>>>", Colors.blue_to_green)     
-        if provider == "gmail":
-            mail = smtplib.SMTP("SMTP.gmail.com", 587)
-        elif provider == "outlook":
-            mail = smtplib.SMTP("smtp.office365.com", 587)
-        elif provider == "yahoo":
-            mail = smtplib.SMTP('smtp.mail.yahoo.com', 587)
-        else:
-            print(f"{Colors.red_to_black}Invalid Service Provider{Colors.blue_to_black}")
-            provider = Write.Input("Select The Service Provider (Gmail / Outlook)>>>", Colors.blue_to_green)
+        subject = Write.Input("Enter Subject>>>", Colors.blue_to_green) 
         kos = EmailMessage()
         kos['From'] = email
         kos['Subject'] = subject
