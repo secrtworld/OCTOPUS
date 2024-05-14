@@ -7,7 +7,6 @@ from getpass import getuser
 from pystyle import Anime, Write, Center, Colors, Colorate
 from colorama import Fore
 import platform
-import Atuoupdate
 from email.message import EmailMessage
 os.system(f'cls' if {os.name} == 'nt' else 'clear')
 #--------------------------------------------w-------------------------------------------
