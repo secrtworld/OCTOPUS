@@ -38,8 +38,8 @@ def attack():
         for x in range(0, counter):
             print(Fore.GREEN + f"Message Number {x + 1} Sent")
             mail.send_message(kos)
-        Write.Print("Message Sent Successfully", Colors.green_to_red
-      except Exception as ex:
+        Write.Print("Message Sent Successfully", Colors.green_to_red)
+    except Exception as ex:
           print(f" EROR: {ex}")
 #------------------------------------------------------------------------------------------    
 def help():
