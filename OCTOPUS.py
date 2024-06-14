@@ -16,7 +16,7 @@ def_email = ['ghos123456789amam@gmail.com', 'rykuvkuhutrnpxrz']
 
 def attack():
       mail = smtplib.SMTP("SMTP.gmail.com",587)
-    try:
+      try:
         target = Write.Input("Enter Taget Email Adders>>>", Colors.blue_to_green)
         email = Write.Input("Do You Want Use A Default Email? If Yes Enter [y] else [n] >>>", Colors.blue_to_red)
         if email == "y":
@@ -39,8 +39,8 @@ def attack():
             print(Fore.GREEN + f"Message Number {x + 1} Sent")
             mail.send_message(kos)
         Write.Print("Message Sent Successfully", Colors.green_to_red)
-    except Exception as ex:
-          print(f" EROR: {ex}")
+      except Exception as ex:
+            print(f" EROR: {ex}")
 #------------------------------------------------------------------------------------------    
 def help():
     baby4 = Fore.LIGHTWHITE_EX+"--update for updateing"
